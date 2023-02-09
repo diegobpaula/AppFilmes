@@ -1,4 +1,4 @@
-package com.diegobpaula.appfilmes.Model;
+package com.diegobpaula.appfilmes.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.diegobpaula.appfilmes.Model.Filmes;
 import com.diegobpaula.appfilmes.R;
-
-import org.w3c.dom.Text;
 
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class AdapterFilme extends RecyclerView.Adapter<AdapterFilme.FilmeViewHol
 
     @Override
     public void onBindViewHolder(@NonNull FilmeViewHolder holder, int position) {
-        holder.capa.setImageResource(filmesList.get(position).getCapa());
+        Glide.with(context).load(filmesList.get(position).getCapa()).into(holder.capa);
         holder.titulo.setText(filmesList.get(position).getTitulo());
 
     }

@@ -3,15 +3,15 @@ package com.diegobpaula.appfilmes.Model;
 public class Filmes {
 
     private String titulo;
-    private int capa;
+    private String capa;
     private String descricao;
     private String elenco;
     private String video;
 
-    public Filmes(int capa, String titulo) {
+    /*public Filmes(String capa, String titulo) {
         this.titulo = titulo;
         this.capa = capa;
-    }
+    }*/
 
     public String getTitulo() {
         return titulo;
@@ -21,11 +21,11 @@ public class Filmes {
         this.titulo = titulo;
     }
 
-    public int getCapa() {
+    public String getCapa() {
         return capa;
     }
 
-    public void setCapa(int capa) {
+    public void setCapa(String capa) {
         this.capa = capa;
     }
 
